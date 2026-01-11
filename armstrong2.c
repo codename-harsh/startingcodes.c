@@ -1,21 +1,22 @@
+// Armstrong Number baby //
 #include<stdio.h>
 #include<math.h>
 int main(){
-    int n,a,b,t,c=0;
-    printf("Enter a  num ");
+    int n,b,temp,r=0,c=0;
+    printf("Enter the Number : \n");
     scanf("%d",&n);
-    a=n;
-    while(a!=0){
-        c++;
-        a/=10;
+    temp = n;
+    while(temp!=0){
+     temp/= 10;
+         c++; // ofc we have to count the no of digits 
     }
-    t=0;
-    while(n!=0){
-        b=n%10;
-        t = t + pow(t,c);
-    n/=10;
-}
-    if(t==n)printf("Armstrong");
-    else printf("Not Armstrong");
+    temp = n;
+    while(temp!=0){
+        b = temp % 10; //remainder it is //
+        r = r + pow(b,c);
+        temp/=10;
+    }
+    if(r==n) printf("It is Armstrong");
+    else printf("Not armstrong ;/");
     return 0;
 }
